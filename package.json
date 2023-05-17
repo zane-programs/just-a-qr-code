@@ -1,11 +1,12 @@
 {
   "name": "just-a-qr-code",
-  "version": "1.0.0",
+  "source": "src/index.html",
+  "version": "1.0.1",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "description": "simple qr code generators. no trackers, no expiration, just qr codes.",
-  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel build",
+    "build": "parcel build"
   },
   "repository": {
     "type": "git",
