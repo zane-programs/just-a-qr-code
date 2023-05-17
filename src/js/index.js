@@ -43,6 +43,9 @@
     a.download = `justaqrcode_${timestamp ?? Date.now()}.png`;
     document.body.appendChild(a);
     a.click();
+    setTimeout(function () {
+      a.remove();
+    }, 100);
   }
 
   async function generateQrCode(formValues) {
