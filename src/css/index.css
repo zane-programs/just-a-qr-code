@@ -1,0 +1,153 @@
+html,
+body {
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+}
+
+html,
+body * {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+h1.site-title {
+  width: 100%;
+  font-weight: 600;
+  text-align: center;
+
+  margin: 12px 0 36px 0;
+}
+
+#qr-form .subgrid {
+  padding-top: 8px;
+}
+
+#qr-form,
+#qr-form .subgrid-menu {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-gap: 16px;
+}
+
+#qr-form .subgrid .subgrid-button::after {
+  content: " \25bc";
+}
+
+#qr-form .subgrid-menu {
+  display: none;
+  padding: 14px 0px;
+}
+
+#qr-form .subgrid[data-visible="true"] .subgrid-menu {
+  display: grid;
+}
+
+#qr-form .subgrid[data-visible="true"] .subgrid-button::after {
+  content: " \25b2";
+}
+
+#qr-form .subgrid .subgrid-button {
+  margin: 0;
+  cursor: pointer;
+  user-select: none;
+
+  background: transparent;
+  color: #fff;
+  border: none;
+  padding: 0;
+
+  font-weight: 600;
+}
+
+#qr-form .text-input {
+  box-sizing: border-box;
+
+  background: #fff;
+  border: none;
+
+  padding: 10px;
+
+  border-radius: 4px;
+
+  font-size: 0.93em;
+}
+
+#qr-form .text-input.full-width {
+  width: 100%;
+}
+
+#qr-form button[type="submit"],
+#qr-preview button {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+
+  font-size: 1.22em;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  background: #000;
+  color: #fff;
+
+  border: 1px solid #fff;
+  border-radius: 4px;
+
+  transition: background 120ms ease-in, color 120ms ease-in;
+
+  margin-top: 12px;
+}
+
+#qr-form button[type="submit"]:hover,
+#qr-preview button:hover {
+  background: #fff;
+  color: #000;
+}
+
+#qr-form button[type="submit"].loading span {
+  display: none;
+}
+
+#qr-form button[type="submit"].loading::after {
+  content: "a";
+}
+
+#qr-form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+#qr-form fieldset legend,
+#qr-form label {
+  font-weight: 500;
+}
+#qr-form fieldset legend {
+  margin-bottom: 8px;
+}
+
+#qr-preview {
+  text-align: center;
+}
+
+#qr-preview * {
+  margin: 0 auto;
+  float: none;
+  display: block;
+}
+
+#qr-preview img {
+  width: 100%;
+}
+
+#qr-preview button {
+  margin-top: 36px;
+}

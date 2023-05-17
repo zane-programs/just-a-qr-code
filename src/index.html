@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>My First Parcel App</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <script type="module" src="js/index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- https://chart.googleapis.com/chart?chs=512x512&cht=qr&chl=https%3A%2F%2Faccounts.google.com%2FAccountChooser%3Fcontinue%3Dhttps%253A%252F%252Fads.google.com%252Fnav%252Flogin%253Fsubid%253Dus-en-awhp-g-aw-c-home-signin%252521o2-adshp-hv-q4-22%2526sourceid%253Demp%26followup%3Dhttps%253A%252F%252Fads.google.com%252Fnav%252Flogin%253Fsubid%253Dus-en-awhp-g-aw-c-home-signin%252521o2-adshp-hv-q4-22%2526sourceid%253Demp%26faa%3D1&choe=UTF-8&chld=L|2 -->
+    <main>
+      <h1 class="site-title">just a qr code</h1>
+      <form id="qr-form">
+        <div class="input-group">
+          <input
+            name="url"
+            type="url"
+            placeholder="url"
+            class="text-input full-width"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="shorten-with-tinyurl">shorten with tinyurl?</label>
+          <input type="checkbox" id="shorten-with-tinyurl" name="shorten" />
+        </div>
+        <div class="subgrid" data-visible="false">
+          <button type="button" class="subgrid-button">advanced</button>
+          <div class="subgrid-menu">
+            <div class="input-group">
+              <fieldset>
+                <legend>dimensions</legend>
+                <input
+                  type="number"
+                  min="1"
+                  class="text-input"
+                  name="width"
+                  placeholder="width"
+                  value="512"
+                  required
+                  style="width: 5em"
+                />
+                x
+                <input
+                  type="number"
+                  min="1"
+                  class="text-input"
+                  name="height"
+                  placeholder="height"
+                  value="512"
+                  required
+                  style="width: 5em"
+                />
+              </fieldset>
+            </div>
+            <div class="input-group">
+              <fieldset>
+                <legend>margin (rows)</legend>
+                <input
+                  type="number"
+                  min="1"
+                  class="text-input"
+                  name="margin"
+                  placeholder="margin"
+                  value="2"
+                  required
+                />
+              </fieldset>
+            </div>
+            <div class="input-group">
+              <fieldset>
+                <legend>error correction</legend>
+                <select
+                  type="text"
+                  class="text-input"
+                  name="errorCorrection"
+                  value="L"
+                  required
+                >
+                  <option value="L">7% (L)</option>
+                  <option value="M">15% (M)</option>
+                  <option value="Q">25% (Q)</option>
+                  <option value="H">30% (H)</option>
+                </select>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+        <button type="submit"><span>create</span></button>
+      </form>
+      <div id="qr-preview" style="display: none">
+        <img />
+        <button>download</button>
+      </div>
+    </main>
+  </body>
+</html>
