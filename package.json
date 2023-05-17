@@ -1,7 +1,7 @@
 {
   "name": "just-a-qr-code",
   "source": "src/index.html",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "description": "simple qr code generators. no trackers, no expiration, just qr codes.",
   "scripts": {
