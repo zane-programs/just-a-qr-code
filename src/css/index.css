@@ -145,7 +145,8 @@ h1.site-title {
 }
 
 #qr-preview img {
-  width: 100%;
+  /* width: 100%; */
+  width: 50vmin;
 }
 
 #qr-preview button {
