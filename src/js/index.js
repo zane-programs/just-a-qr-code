@@ -55,7 +55,7 @@
 
     const { width, height, margin, errorCorrection } = formValues;
 
-    const qrImageUrl = `https://chart.googleapis.com/chart?chs=${width}x${height}&cht=qr&chl=${url}&choe=UTF-8&chld=${errorCorrection}|${margin}`;
+    const qrImageUrl = `https://quickchart.io/chart?chs=${width}x${height}&cht=qr&chl=${url}&choe=UTF-8&chld=${errorCorrection}|${margin}`;
 
     const qrReq = await fetch(qrImageUrl);
     const qrRes = await qrReq.blob();
